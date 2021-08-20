@@ -46,7 +46,7 @@ To get up and runing the project follow the following steps.
 ### Steps
 
 1. First, generate required a private and public key pair for your server with `npx web-push generate-vapid-keys`. 
-2. Replace the public and private key in the application.properties file with the generated keys
+2. Replace the public and private key in the application.properties file with the generated keys.
 3. Start the Spring Boot application(go inside demo project) by running `PushNotificationApplication.java` or running the jar. Generate the jar using `./gradlew clean build` and run he jar using `java -jar build/libs/demo-0.0.1-SNAPSHOT.jar`.
 4. To start the react application(go inside my_app project) first run `npm install` and after that run `npm start`.
 5. Navigate to http://localhost:3000/ using your browser.
