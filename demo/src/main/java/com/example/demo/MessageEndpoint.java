@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import nl.martijndwars.webpush.Subscription;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;

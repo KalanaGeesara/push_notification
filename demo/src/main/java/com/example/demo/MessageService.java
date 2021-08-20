@@ -14,7 +14,6 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.security.Security;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +24,10 @@ import java.util.stream.Collectors;
 @Service
 public class MessageService {
 
-  private String publicKey="BFFebg8NwkRm9gyZadmhiybdUPYwecvviguATSAPqHmhTdpiIVTm0fFyqK62tKwSG4EG2iSuD0Fg7pquO0yP8Hs";
-  private String privateKey="68RRYaKN1kv01G19F6mnZPdRPzMjagC3zosOqGjalM4";
+  @Value("${vapid.public.key}")
+  private String publicKey;
+  @Value("${vapid.private.key}")
+  private String privateKey;
 
   private PushService pushService;
   private List<Subscription> subscriptions = new ArrayList<>();
